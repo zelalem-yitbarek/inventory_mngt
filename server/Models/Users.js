@@ -7,6 +7,7 @@ const UserSchema = new mongoose.Schema({
   password: { type: String, required: true },
 });
 
+/*
 // Pre-save hook to hash password
 UserSchema.pre("save", async function (next) {
   try {
@@ -20,6 +21,7 @@ UserSchema.pre("save", async function (next) {
     next(err);
   }
 });
+*/
 
 const User = mongoose.models.User || mongoose.model("User", UserSchema);
 export default User;
